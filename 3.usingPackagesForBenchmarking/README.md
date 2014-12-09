@@ -1,5 +1,5 @@
 
-**TL;DR** A puzzle solver in OCaml,F# and Scala. Just type `make`.
+**TL;DR** A puzzle solver in OCaml, F# and Scala. Just type `make`.
 
 Basically, as part of learning Scala (in my freetime), I ported some code I wrote back in 2011 (from OCaml and F#
 to Scala). The code is about a puzzle, and when I initially wrote it, F# couldn't copy - here's my [original 
