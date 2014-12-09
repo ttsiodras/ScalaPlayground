@@ -1,7 +1,7 @@
 
 **TL;DR** A puzzle solver in OCaml, F# and Scala. Just type `make`.
 
-Basically, as part of learning Scala (in my freetime), I ported some code I wrote back in 2011 (from OCaml and F#
+Basically, as part of learning Scala (in my free time), I ported some code I wrote back in 2011 (from OCaml and F#
 to Scala). The code is about a puzzle, and when I initially wrote it, F# couldn't cope - here's my [original 
 question on StackOverflow](http://stackoverflow.com/questions/7538584/f-vs-ocaml-stack-overflow) . Later on,
 I figured out how to do it *properly*, using tail recursion. So now, 3 years later, let's see how Scala fares 
@@ -61,7 +61,9 @@ I then added 4 other implementations sent to me by kind people on [StackOverflow
     Benchmarking ========> functional_with_Seq, Best time was 148 ms.
     Benchmarking =====> flatMap_SeqTailRecurse, Best time was 204 ms.
 
-Scala is very appealing - it has the nice, strong and static type system of the ML-world,
+Executive summary?
+
+Scala so far looks very appealing - it has the nice, strong *and* static type system of the ML-world,
 but it doesn't live in an island like Haskell and OCaml - it has the huge ecosystem of the JVM
 (hello, enterprise overlords!). F# (albeit slower) offers a similar advantage, and therefore
 reduces my "state machine" to this (when I do have a say in the matter):
@@ -71,8 +73,10 @@ reduces my "state machine" to this (when I do have a say in the matter):
       case RealOperatingSystems => println("Use Scala, Luke!")
     }
 
-Compiled, it will of course report:
+Compiled, the code above will of course report:
 
     Pattern match not complete - you forgot scripting (with Python, of course)
 
 :-)
+
+Now to see how I can debug Scala outside of IDE monstrosities.
