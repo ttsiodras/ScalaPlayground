@@ -2,7 +2,7 @@
 **TL;DR** A puzzle solver in OCaml, F# and Scala. Just type `make`.
 
 Basically, as part of learning Scala (in my freetime), I ported some code I wrote back in 2011 (from OCaml and F#
-to Scala). The code is about a puzzle, and when I initially wrote it, F# couldn't copy - here's my [original 
+to Scala). The code is about a puzzle, and when I initially wrote it, F# couldn't cope - here's my [original 
 question on StackOverflow](http://stackoverflow.com/questions/7538584/f-vs-ocaml-stack-overflow) . Later on,
 I figured out how to do it *properly*, using tail recursion. So now, 3 years later, let's see how Scala fares 
 with it...  
@@ -52,7 +52,7 @@ The results of all my implementations - with the code using identical concepts i
 Looking at the min times (when benchmarking CPU bound algorithms, that's what you 
 should do), it is clear that amazingly, Scala is just as fast as OCaml - leaving F# more than 2x behind.
 
-Nice work, JVM HotSpot.
+Nice work, JVM HotSpot!
 
 I then added 4 other implementations sent to me by kind people on [StackOverflow](http://stackoverflow.com/questions/27291969/mapping-my-code-from-ocaml-f-to-scala-some-questions). Here's their score:
 
@@ -61,6 +61,18 @@ I then added 4 other implementations sent to me by kind people on [StackOverflow
     Benchmarking ========> functional_with_Seq, Best time was 148 ms.
     Benchmarking =====> flatMap_SeqTailRecurse, Best time was 204 ms.
 
-Scala is already very appealing - it has the nice, strong and static type system of the ML-world,
+Scala is very appealing - it has the nice, strong and static type system of the ML-world,
 but it doesn't live in an island like Haskell and OCaml - it has the huge ecosystem of the JVM
-(hello, enterprise overlords). F# claims the same, but from my benchmarks it seems to be slower.
+(hello, enterprise overlords!). F# (albeit slower) offers a similar advantage, and therefore
+reduces my "state machine" to this (when I do have a say in the matter):
+
+    val languageOfChoice = targetEnv match {
+      case Windows => println("Use F#, Luke!")
+      case RealOperatingSystems => println("Use Scala, Luke!")
+    }
+
+Compiled, it will of course report:
+
+    Pattern match not complete - you forgot scripting (with Python, of course)
+
+:-)
