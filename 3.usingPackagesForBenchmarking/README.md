@@ -1,7 +1,7 @@
 
 As part of my Scala learning, I ported some code I wrote back in 2011, in OCaml and F#.
 It's about a puzzle - which in fact caused some issues with F# (here's my [original 
-question on StackOverflow](http://stackoverflow.com/questions/7538584/f-vs-ocaml-stack-overflow),
+question on StackOverflow](http://stackoverflow.com/questions/7538584/f-vs-ocaml-stack-overflow) :
 
 > There is an ant which can walk around on a planar grid. The ant can move one
 > space at a time left, right, up or down. That is, from cell (x, y) the ant
